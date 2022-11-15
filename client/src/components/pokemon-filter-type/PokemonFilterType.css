@@ -1,0 +1,14 @@
+#filter-type-aside{
+    background-color: white;
+    padding: 10px;
+    border-radius: 99px;
+    border: 1px solid #ff4c00;
+}
+#select-types{
+    width: auto;
+    padding: 2px;
+    padding-left: 10px;
+    border-radius: 99px;
+    border: 1px solid #ff4c00;
+    font-family: Verdana;
+}

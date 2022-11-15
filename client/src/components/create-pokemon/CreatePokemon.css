@@ -1,0 +1,32 @@
+#form{
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.error{
+    background-color: rgb(216, 19, 19);
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+.types-create-pokemon{
+    background-color: rgb(255, 118, 68);
+    color: rgb(34, 34, 34);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: fit-content;
+}
+#create-button{
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(17, 17, 17);
+    color: orangered;
+    border-radius: 5px;
+}

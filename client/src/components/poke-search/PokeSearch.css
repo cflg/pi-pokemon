@@ -1,0 +1,28 @@
+#poke-search{
+    background-color: white;
+    padding: 10px;
+    border-radius: 99px;
+    border: 1px solid #ff4c00;
+}
+#poke-input{
+    width: auto;
+    padding: 2px;
+    padding-left: 10px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #ff4c00;
+    font-family: Verdana;
+}
+#poke-button{
+    border-radius: 0 10px 10px 0;
+    width: auto;
+    padding: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border: 1px solid #ff4c00;
+    background-color: #ff9e00;
+    color: rgb(49, 49, 49);
+    font-weight: bold;
+    font-family: Verdana;
+
+    
+}

@@ -1,0 +1,11 @@
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    background-color: chocolate;
+    height: 10vh;
+    background: linear-gradient(270deg, rgba(255, 76, 0, 1) 0%, rgba(255, 158, 0, 1) 100%);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}

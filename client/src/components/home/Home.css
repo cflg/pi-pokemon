@@ -1,0 +1,5 @@
+main{
+    background-color: grey;
+    height: 80vh;
+    background: linear-gradient(45deg, rgba(208, 232, 255, 1) 0%, rgba(228, 196, 255, 1) 100%);
+}
