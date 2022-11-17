@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const { getAllPokemons, getPokemonById, getPokemonByQuery } = require('../controllers/getPokemons')
 const { postPokemon } = require('../controllers/postPokemons')
+const { deletePokemon } = require('../controllers/deletePokemon')
 const router = Router();
 const pokemonsRouter = router
 const { Type } = require('../db')
@@ -44,6 +45,16 @@ pokemonsRouter.post('/', async (req, res) => {
         let typesSearch = await Type.findAll({ where: {name: types}})
         await newPokemon.addTypes(typesSearch)
         res.status(200).send(`El pokemon ${name} fue creado correctamente`)
+    } catch (error) {
+        res.status(400).send(error.message)
+    }
+})
+
+pokemonsRouter.delete('/:id', async (req, res) => {
+    const { id } = req.params
+    try {
+        await deletePokemon(id)
+        res.status(200).send(`El pokemon fue eliminado`)
     } catch (error) {
         res.status(400).send(error.message)
     }

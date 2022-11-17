@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ERROR, GET_ALL_POKEMONS, GET_CREATED_POKEMONS, GET_POKEMON_BY_ID, GET_API_POKEMONS, GET_FILTERED_CREATES, GET_FILTERED_ASC_DES, GET_FILTERED_TYPES, GET_POKEMON_BY_QUERY, GET_ALL_TYPES } from "./constants";
+import { ERROR, GET_ALL_POKEMONS, GET_CREATED_POKEMONS, GET_POKEMON_BY_ID, GET_API_POKEMONS, GET_FILTERED_CREATES, GET_FILTERED_ASC_DES, GET_FILTERED_TYPES, GET_POKEMON_BY_QUERY, DELETE_POKEMON, GET_ALL_TYPES } from "./constants";
 
 /* ACTIONS CREATOR: GET */
 
@@ -171,25 +171,23 @@ export const getAllTypes = () => {
     }
 }
 
+/* ACTIONS CREATOR: GET */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export const deletePokemon = (id) => {
+    return async dispatch => {
+        try {
+            if(id.length > 4){
+                await axios.delete(`http://localhost:3001/pokemon/${id}`)
+            }
+            dispatch ({
+                type: DELETE_POKEMON,
+                payload: id
+            })
+        } catch (error) {
+            dispatch({
+                type: ERROR,
+                payload: error.message
+            }) 
+        }
+    }
+}

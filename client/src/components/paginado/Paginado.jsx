@@ -7,21 +7,21 @@ const Paginado = ({ pokePage, pokesFiltered, paginado, page }) => {
     pageNum.push(i + 1);
   }
   return (
-    <nav>
+    <div id="paginado-container">
       <ul className="paginado">
         {pageNum &&
           pageNum.map((n) => (
             <li
               className="numbers"
               key={n}
-              style={page === n ? { backgroundColor: "yellow" } : {}}
+              style={page === n ? { backgroundColor: "#8DDFA3" } : {}}
               onClick={() => paginado(n)}
             >
               <p>{n}</p>
             </li>
           ))}
       </ul>
-    </nav>
+    </div>
   );
 };
 

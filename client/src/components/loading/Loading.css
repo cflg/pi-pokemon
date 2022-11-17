@@ -1,0 +1,22 @@
+@font-face {
+    font-family: roboto-bold;
+    src: url('../../fonts/RobotoCondensed-Bold.ttf');
+}
+#loading{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#loading-img{
+    margin-top: 30px;
+    width: 40%;
+    height: 40%;
+}
+#loading-text{
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+    font-family: roboto-bold;
+}

@@ -5,6 +5,7 @@ import PokeSearchCard from "../poke-search-card/PokeSearchCard";
 import Pokemon from "../pokemon/Pokemon";
 import"./PokemonsContainer.css";
 import Paginado from "../paginado/Paginado";
+import Loading from "../loading/Loading";
 
 const PokemonsContainer = () => {
   const dispatch = useDispatch();
@@ -34,7 +35,7 @@ const PokemonsContainer = () => {
   if (error) {
     return (
       <>
-        <h1>{error}</h1>
+        <p id="error-text">{error}</p>
       </>
     );
   } else if (pokeSearch.length) {
@@ -48,23 +49,31 @@ const PokemonsContainer = () => {
   } else {
     if (pokesFiltered.length) {
       if (typeof pokesFiltered[0] !== "object") {
-        return <p>No existen pokemones con esos parametros</p>;
+        return <p id="error-type">There are no pokemon with those parameters</p>;
       }
       return (
         <div id="pokes-container">
+          <div id='paginado'>
           <Paginado
             pokePage={pokePage}
             pokesFiltered={pokesFiltered.length}
             paginado={paginado}
             page={currentPage}
           />
+          </div>
+          <div id='pokemon-cards'>
           {currentPoke.map((poke) => {
             return <Pokemon pokemon={poke} />;
           })}
+          </div>
         </div>
       );
     }
-    return <p>Cargando...</p>;
+    return (
+      <>
+      <Loading />
+      </>
+    );
   }
 };
 

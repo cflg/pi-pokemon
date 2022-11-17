@@ -1,5 +1,24 @@
 #pokes-container{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+#paginado{
+    width: 100%;
+}
+#pokemon-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#error-text{
+    font-family: Verdana;
+    font-size: 30px;
+    margin-top: 30px;
+}
+#error-type{
+    font-family: Verdana;
+        font-size: 30px;
+        margin-top: 30px;
 }

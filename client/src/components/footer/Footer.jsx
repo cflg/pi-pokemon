@@ -2,10 +2,10 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <footer>
-            <p>App creada por Cristian Lo Giudice</p>
-        </footer>
-    )
+      <footer>
+        <p id="text-footer">App created by Cristian Lo Giudice</p>
+      </footer>
+    );
 }
 
 export default Footer

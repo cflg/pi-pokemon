@@ -1,14 +1,24 @@
+@font-face {
+    font-family: roboto-bold;
+    src: url('../../fonts/RobotoCondensed-Bold.ttf');
+}
 #filter-type-aside{
-    background-color: white;
+    font-weight: bolder;
+    font-family: roboto-bold;
+    font-size: 20px;
     padding: 10px;
-    border-radius: 99px;
-    border: 1px solid #ff4c00;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 10px;
 }
 #select-types{
     width: auto;
     padding: 2px;
+    border-radius: 3px;
+    border: 2px solid rgba(255, 75, 0, 1);
     padding-left: 10px;
-    border-radius: 99px;
-    border: 1px solid #ff4c00;
-    font-family: Verdana;
+    font-family: roboto-bold;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

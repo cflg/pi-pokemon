@@ -1,4 +1,5 @@
-import { ERROR, GET_ALL_POKEMONS, GET_CREATED_POKEMONS, GET_POKEMON_BY_ID, GET_API_POKEMONS, GET_FILTERED_CREATES, GET_FILTERED_ASC_DES, GET_FILTERED_TYPES, GET_POKEMON_BY_QUERY, GET_ALL_TYPES } from "./constants";
+
+import { ERROR, GET_ALL_POKEMONS, GET_CREATED_POKEMONS, GET_POKEMON_BY_ID, GET_API_POKEMONS, GET_FILTERED_CREATES, GET_FILTERED_ASC_DES, GET_FILTERED_TYPES, GET_POKEMON_BY_QUERY, DELETE_POKEMON, GET_ALL_TYPES } from "./constants";
 
 const initialState = {
     allPokemons: [],
@@ -79,73 +80,78 @@ const rootReducer = (state = initialState, action) => {
                     pokemonsFilter: state.allPokemons
                 }
             }
-        case GET_FILTERED_ASC_DES:
+        case GET_FILTERED_ASC_DES:            
             let alls = state.allPokemons
             let pload = action.payload
             if (pload === 'az') {
+               
                 let az = alls.sort((p1, p2) => {
 
                     if (p1.name < p2.name) {
                         return -1;
-                    } else if (p1.name > p2.name) {
-                        return 1;
                     }
+                        return 1;
+                    
                 })
                 return {
                     ...state,
-                    pokemonsFilter: az
+                    pokemonsFilter: [...az]
                 }
             } else if (pload === 'za') {
                 let za = alls.sort((p1, p2) => {
 
                     if (p1.name < p2.name) {
                         return 1
-                    } else if(p1.name > p2.name) {
-                        return -1
                     }
+                        return -1
+                    
                 })
                 return {
                     ...state,
-                    pokemonsFilter: za
+                    pokemonsFilter: [...za]
                 }
             } else if (pload === 'ha') {
                 let ha = alls.sort((p1, p2) => {
-
                     if (p1.attack < p2.attack) {
                         return 1
-                    } else if (p1.attack > p2.attack) {
-                        return -1
                     }
+                     return -1
+                    
 
                 })
                 return {
                     ...state,
-                    pokemonsFilter: ha
+                    pokemonsFilter: [...ha]
                 }
             } else if (pload === 'la') {
-                let ha = alls.sort((p1, p2) => {
+                let la = alls.sort((p1, p2) => {
 
                     if (p1.attack < p2.attack) {
                         return -1
-                    } else if (p1.attack > p2.attack) {
-                        return 1
                     }
+                        return 1                 
 
                 })
                 return {
                     ...state,
-                    pokemonsFilter: ha
+                    pokemonsFilter: [...la]
                 }
             } else {
                 return {
                     ...state,
-                    pokemonsFilter: [...state.pokemonsFilter, ...state.allPokemons]
+                    pokemonsFilter: [...state.allPokemons]
                 }
             }
         case GET_ALL_TYPES:
             return {
                 ...state,
                 types: action.payload
+            }
+        case DELETE_POKEMON:
+            let pop = state.pokemonsFilter.pop(action.payload)
+            return {
+                ...state,
+                pokemonsFilter: pop
             }
         case ERROR:
             return {
@@ -158,4 +164,3 @@ const rootReducer = (state = initialState, action) => {
 }
 
 export default rootReducer
-

@@ -1,12 +1,55 @@
+@font-face {
+    font-family: roboto-bold;
+    src: url('../../fonts/RobotoCondensed-Bold.ttf');
+}
 #card{
-    background-color: white;
+    background-image: radial-gradient(circle 1200px at 100% 33%, rgba(255, 243, 110, 1) 0%, rgba(30, 204, 214, 1) 45.6%, rgba(5, 54, 154, 1) 65.9%);
     border-radius: 5px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    height: 150px;
-    width: 150px;
+    border: 2px solid #345B89;
+    height: 250px;
+    width: 250px;
     padding: 20px;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+}
+#name{
+    justify-content: center;
+    text-transform: uppercase;
+    margin-left: 5px;
+    font-size: 30px;
+    font-family: roboto-bold;
+    font-weight: bolder;
+    width: 100%;
+}
+.types-card{
+    font-family: Verdana;
+    background-color: rgb(81, 182, 81);
+    border-radius: 3px;
+    width: 65px;
+    border: 1px solid #345B89;
+    height: min-content;
+    padding: 5px;
+    margin: 5px;
+    text-transform: capitalize;
+    font-family: roboto-bold;
+}
+.card-img{
+    position: absolute;
+    margin-left: 130px;
+    margin-top: 100px;
+    transform: scale(2.5)
+}
+.full-stats {
+    text-decoration: none;
+    font-family: roboto-bold;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: rgb(26, 25, 25);
+    margin-left: 5px;
+    cursor: pointer;
 }

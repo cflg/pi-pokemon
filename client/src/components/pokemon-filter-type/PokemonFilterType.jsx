@@ -21,6 +21,7 @@ const PokemonFilterType = () => {
   const handleCreates = (e) => {
     dispatch(getFilteredByCreated(e.target.value));
   };
+
   const handleAscDes = (e) => {
     dispatch(getFilteredByAscOrDesc(e.target.value));
   };
@@ -55,7 +56,7 @@ const PokemonFilterType = () => {
         id="select-types"
         onChange={(e) => handleAscDes(e)}
       >
-        <option value="random">Random</option>
+        <option value="id">ID</option>
         <option value="az">A - Z</option>
         <option value="za">Z - A</option>
         <option value="ha">Highest attack</option>

@@ -14,12 +14,9 @@ const PokeSearch = () => {
 
     const handleSubmit = (e) => {
       e.preventDefault()
-      dispatch(getPokemonByQuery(pokemon))
+      dispatch(getPokemonByQuery(pokemon.toLocaleLowerCase()))
       
     }
-    /* if(error){
-      setPokemon('')
-    } */
     return (
       <div id="poke-search">
         <form action="" method="get" onSubmit={handleSubmit}>
@@ -27,12 +24,12 @@ const PokeSearch = () => {
             type="text"
             id="poke-input"
             name="name"
-            placeholder="Busca un pokemon"
+            placeholder="Find a pokemon"
             value={pokemon}
             onChange={handleChange}
           />
           <button id='poke-button' type="submit">
-            <p id='search'>Buscar</p>
+            <p id='search'>Search</p>
           </button>
         </form>
       </div>

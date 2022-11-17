@@ -1,20 +1,29 @@
+@font-face {
+    font-family: roboto-bold;
+    src: url('../../fonts/RobotoCondensed-Bold.ttf');
+}
+#paginado-container{
+    display: flex;
+    justify-content: center;
+}
+
 .paginado{
-    background-color: white;
-    color: orangered;
+    color: #345B89;
     font-size: 20px;
     margin: 10px;
     padding: 10px;
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
 .numbers{
+    background-color: white;
     text-decoration: none;
     list-style: none;
-    width: auto;
     margin: 10px;
     padding: 10px;
     cursor: pointer;
-    border: 1px solid orangered;
-    border-radius: 99px;
+    border: 2px solid #345B89;
+    border-radius: 5px;
+    font-family: roboto-bold;
 }
