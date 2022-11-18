@@ -16,6 +16,10 @@
     flex-direction: column;
     position: relative;
     justify-content: space-between;
+    transition: all 0.5s;
+}
+#card:hover{
+    transform: scale(1.02)
 }
 #name{
     justify-content: center;
@@ -39,10 +43,11 @@
     font-family: roboto-bold;
 }
 .card-img{
+    height: 160px;
     position: absolute;
-    margin-left: 130px;
-    margin-top: 100px;
-    transform: scale(2.5)
+    margin-left: 70px;
+    margin-top: 50px;
+    /* transform: scale(2.5) */
 }
 .full-stats {
     text-decoration: none;

@@ -10,15 +10,14 @@ nav{
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
     width: 100%;
     border-bottom: 2px solid #C90000;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
-img{
+/* img{
     height: 10vh;
     margin-left: 10px;
-}
+} */
 #nav-img{
-    position: absolute;
-    margin-left: -1170px;
+    height: 75px;
 }
 #menu{
     text-decoration: none;

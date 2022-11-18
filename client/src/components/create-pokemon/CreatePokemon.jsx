@@ -67,7 +67,6 @@ const CreatePokemon = () => {
   return (
     <div id="form-container">
       <form action="post" onSubmit={handleSubmit} id="form">
-        {create ? <p id="poke-created-form">Pokemon created</p> : <></>}
         <p id="form-title">Create your pokemon</p>
         <div id="elements-container">
           {/* INICIO DIV LABELS */}
@@ -217,6 +216,7 @@ const CreatePokemon = () => {
             Create
           </button>
         )}
+        {create ? <p id="poke-created-form">Pokemon created</p> : <></>}
       </form>
       {!Object.entries(error).length && <img src={ash} alt="" id="img-ash" />}
     </div>

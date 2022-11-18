@@ -25,11 +25,12 @@ const PokeSearch = () => {
             id="poke-input"
             name="name"
             placeholder="Find a pokemon"
+            autocomplete="off"
             value={pokemon}
             onChange={handleChange}
           />
-          <button id='poke-button' type="submit">
-            <p id='search'>Search</p>
+          <button id="poke-button" type="submit">
+            <p id="search">Search</p>
           </button>
         </form>
       </div>

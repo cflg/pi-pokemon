@@ -11,6 +11,7 @@ const PokemonsContainer = () => {
   const dispatch = useDispatch();
   const error = useSelector((state) => state.error);
   const pokeSearch = useSelector((state) => state.pokeSearch);
+  console.trace(pokeSearch)
   const pokesFiltered = useSelector((state) => state.pokemonsFilter);
   //paginado
   const [currentPage, setCurrentPage] = useState(1)

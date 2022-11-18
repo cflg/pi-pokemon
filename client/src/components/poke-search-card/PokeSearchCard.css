@@ -10,7 +10,7 @@
     margin-top: 30px;
     padding: 30px;
     border-radius: 5px;
-    width: 50%;
+    width: 500px;
     display: flex;
     flex-direction: row;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -43,7 +43,7 @@
 }
 #poke-search-img>img{
     position: absolute;
-    margin-top: 200px;
-    margin-left: 120px;
-    transform: scale(6)
+    height: 600;
+    margin-top: 80px;
+    /* transform: scale(6) */
 }
