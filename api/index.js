@@ -23,7 +23,7 @@ require('dotenv').config();
 
 // Syncing all the models at once.
 conn.sync({ alter: true }).then(() => {
-  server.listen(process.env.PORT || 3001 , () => {
+  server.listen(process.env.PORT || '0.0.0.0', () => {
     console.log('Vas bien pero falta.'); // eslint-disable-line no-console
   });
 });
