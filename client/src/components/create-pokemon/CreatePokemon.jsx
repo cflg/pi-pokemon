@@ -32,7 +32,10 @@ const CreatePokemon = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(validations(pokeData));
-    await axios.post("/pokemon", pokeData);
+    await axios.post(
+      "https://pi-pokemon-production-a87b.up.railway.app/pokemon",
+      pokeData
+    );
     setCreate(true)
     /* setPokeData({
       name: "",
