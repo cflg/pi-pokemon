@@ -6,7 +6,7 @@ import { ERROR, GET_ALL_POKEMONS, GET_CREATED_POKEMONS, GET_POKEMON_BY_ID, GET_A
 export const getAllPokemons = () => {
     return async (dispatch) => {
         try {
-            let res = await axios.get('http://localhost:3001/pokemon')
+            let res = await axios.get('/pokemon')
             let pokes = res.data
             dispatch({
                 type: GET_ALL_POKEMONS,
@@ -72,7 +72,7 @@ export const getFilteredByAscOrDesc = value => {
 export const getPokemonById = id => {
     return async dispatch => {
         try {
-            let res = await axios.get(`http://localhost:3001/pokemon/${id}`)
+            let res = await axios.get(`/pokemon/${id}`)
             let poke = res.data
             dispatch({
                 type: GET_POKEMON_BY_ID,
@@ -90,7 +90,7 @@ export const getPokemonById = id => {
 export const getCreatedPokemons = () => {
     return async dispatch => {
         try {
-            let res = await axios.get('http://localhost:3001/pokemon')
+            let res = await axios.get('/pokemon')
             let pokes = res.data
             let createdPokes = []
             for (let i = 0; i < pokes.length; i++) {
@@ -114,7 +114,7 @@ export const getCreatedPokemons = () => {
 export const getPokemonByQuery = value => {
     return async dispatch => {
         try {
-            let res = await axios.get(`http://localhost:3001/pokemon?name=${value}`)
+            let res = await axios.get(`/pokemon?name=${value}`)
             let pokeSearch = res.data
             dispatch({
                 type: GET_POKEMON_BY_QUERY,
@@ -132,7 +132,7 @@ export const getPokemonByQuery = value => {
 export const getApiPokemons = () => {
     return async dispatch => {
         try {
-            let res = await axios.get('http://localhost:3001/pokemon')
+            let res = await axios.get('/pokemon')
             let pokes = res.data
             let createdPokes = []
             for (let i = 0; i < pokes.length; i++) {
@@ -156,7 +156,7 @@ export const getApiPokemons = () => {
 export const getAllTypes = () => {
     return async dispatch => {
         try {
-            let res = await axios.get('http://localhost:3001/types')
+            let res = await axios.get('/types')
             let types = res.data
             dispatch({
                 type: GET_ALL_TYPES,
@@ -177,7 +177,7 @@ export const deletePokemon = (id) => {
     return async dispatch => {
         try {
             if(id.length > 4){
-                await axios.delete(`http://localhost:3001/pokemon/${id}`)
+                await axios.delete(`/pokemon/${id}`)
             }
             dispatch ({
                 type: DELETE_POKEMON,
