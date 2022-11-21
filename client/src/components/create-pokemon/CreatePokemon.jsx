@@ -32,7 +32,7 @@ const CreatePokemon = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(validations(pokeData));
-    await axios.post("http://localhost:3001/pokemon", pokeData);
+    await axios.post("/pokemon", pokeData);
     setCreate(true)
     /* setPokeData({
       name: "",
