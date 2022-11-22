@@ -56,7 +56,6 @@ const CreatePokemon = () => {
       [e.target.name]: e.target.value,
     });
     setError(validations(pokeData));
-    console.log(error);
   };
   const handleSelect = (e) => {
     if (!pokeData.types.includes(e.target.value)) {
