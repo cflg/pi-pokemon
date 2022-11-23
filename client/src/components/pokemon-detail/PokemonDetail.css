@@ -65,6 +65,22 @@
     border-radius: 5px;
     cursor: pointer;
 }
+a{
+    text-decoration: none;
+}
+.poke-update-button{
+    font-size: 20px;
+        color: black;
+        background-color: rgb(255, 228, 78);
+        border: 1px solid #ce7500;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 5px;
+        margin: 5px;
+        margin-top: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+}
 #poke-detail-img{
     position: absolute;
     height: 350px;

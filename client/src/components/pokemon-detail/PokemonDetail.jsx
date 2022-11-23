@@ -16,7 +16,7 @@ const PokemonDetail = (props) => {
     }, [dispatch, id]);
 
     let poke = useSelector((state) => state.pokeDetails);
-
+    
     const handleDelete = (id) => {
       dispatch(deletePokemon(id))
       setDeleted(true)
@@ -34,7 +34,12 @@ const PokemonDetail = (props) => {
                 <p id="poke-detail-id">ID: {p.id}</p>
                 <p id="poke-detail-title">Stats</p>
                 <div id="poke-detail-stats">
-                  <p>Health: {p.hp}</p>
+                  {p.id.length > 4 ? (
+                    <p>Health: {p.health}</p>
+                  ) : (
+                    <p>Health: {p.hp}</p>
+                  )}
+
                   <p>Attack: {p.attack}</p>
                   <p>Defense: {p.defense}</p>
                   <p>Speed: {p.speed}</p>
@@ -45,6 +50,11 @@ const PokemonDetail = (props) => {
                   <p id="poke-detail-button" onClick={() => handleDelete(p.id)}>
                     Delete
                   </p>
+                )}
+                {p.id.length > 4 && (
+                  <a href={`/update-pokemon/${id}`}>
+                    <p className="poke-update-button">Update</p>
+                  </a>
                 )}
               </div>
               <div>
