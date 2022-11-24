@@ -12,12 +12,22 @@ function App() {
   return (
     <>
     <Route exact path='/' component={LandingPage} />
-    <Route path='/' component={Navbar} />
+
+    <Route path='/home' component={Navbar} />
+    <Route path='/create-pokemon' component={Navbar} />
+    <Route path='/pokemon-detail/:id' component={Navbar} />
+    <Route path='/update-pokemon/:id' component={Navbar} />
+
+    
     <Route path='/home' component={Home}/>
     <Route path='/pokemon-detail/:id' component={PokemonDetail} />
     <Route path='/update-pokemon/:id' component={UpdatePokemon} />
     <Route path='/create-pokemon' component={CreatePokemon} />
-    <Route path='/' component={Footer} />
+    
+      <Route path='/home' component={Footer} />
+      <Route path='/create-pokemon' component={Footer} />
+      <Route path='/pokemon-detail/:id' component={Footer} />
+      <Route path='/update-pokemon/:id' component={Footer} />
     </>
   );
 }

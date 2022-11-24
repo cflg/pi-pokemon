@@ -8,7 +8,6 @@ import ash from "../../images/ash.png";
 
 const UpdatePokemon = (props) => {
   let ids = props.match.params.id;
-  console.log(ids)
 
   const [pokeData, setPokeData] = useState({
     name: "",
@@ -35,8 +34,10 @@ const UpdatePokemon = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(validations(pokeData));
-    await axios.put(`http://localhost:3001/pokemon/${ids}`, pokeData);
-    console.log(pokeData)
+    await axios.put(
+      `https://pi-pokemon-production-a87b.up.railway.app/pokemon/${ids}`,
+      pokeData
+    );
     setUpdate(true);
     /* setPokeData({
       name: "",
