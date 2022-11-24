@@ -66,7 +66,7 @@ pokemonsRouter.put('/:id', async (req, res) => {
     const { name, health, attack, defense, speed, height, weight, image, types } = req.body
     try {        
         await updatePokemon(id, name, health, attack, defense, speed, height, weight, image, types)
-        console.log(`TYPES RUTE: ${types}`)
+        
         res.status(200).send(`Pokemon updated`)
     } catch (error) {
         res.status(400).send(error.message)

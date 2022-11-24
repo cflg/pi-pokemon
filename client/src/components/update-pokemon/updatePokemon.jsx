@@ -35,21 +35,11 @@ const UpdatePokemon = (props) => {
     e.preventDefault();
     setError(validations(pokeData));
     await axios.put(
-      `https://pi-pokemon-production-a87b.up.railway.app/pokemon/${ids}`,
+      `http://localhost:3001/pokemon/${ids}`,
       pokeData
     );
     setUpdate(true);
-    /* setPokeData({
-      name: "",
-      health: 0,
-      attack: 0,
-      defense: 0,
-      speed: 0,
-      height: 0,
-      weight: 0,
-      image: "",
-      types: [],
-    }); */
+    
   };
   const handleChange = (e) => {
     setPokeData({
