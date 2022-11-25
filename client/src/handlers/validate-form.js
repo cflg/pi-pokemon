@@ -1,6 +1,7 @@
 const validations = pokeData => {
     const error = {}
     let regexp = /^[a-z\s]*$/
+    let regexpImg = /.*(png|jpg|jpeg|gif)$/
 
     if (!pokeData.name) {
         error.name = 'Name is required'
@@ -28,6 +29,9 @@ const validations = pokeData => {
     }
     if (!pokeData.image) {
         error.image = "Image is required";
+    }
+    if (!regexpImg.test(pokeData.image)) {
+        error.image = "Url is required";
     }
     if (!pokeData.types.length) {
         error.types = "Types is required";

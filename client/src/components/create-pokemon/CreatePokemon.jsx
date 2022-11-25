@@ -33,7 +33,7 @@ const CreatePokemon = () => {
     e.preventDefault();
     setError(validations(pokeData));
     await axios.post(
-      "https://pi-pokemon-production-a87b.up.railway.app/pokemon",
+      "http://localhost:3001/pokemon",
       pokeData
     );
     setCreate(true)

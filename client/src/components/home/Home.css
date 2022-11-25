@@ -1,6 +1,6 @@
 #home-container{
     height: auto;
-    min-height: 75.3vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: row;
     /* background-color: #85FFBD;
